@@ -1,94 +1,94 @@
-body {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: hidden;
-  height: 200vh;
 }
 
-@-webkit-keyframes test {
-  from {
-    -webkit-transform: translatex(-100%);
-            transform: translatex(-100%);
-  }
-  to {
-    -webkit-transform: translatex(100%);
-            transform: translatex(100%);
-  }
+body {
+  font-family: 'Newsreader', serif;
 }
 
-@keyframes test {
-  from {
-    -webkit-transform: translatex(-100%);
-            transform: translatex(-100%);
-  }
-  to {
-    -webkit-transform: translatex(100%);
-            transform: translatex(100%);
-  }
-}
-
-.flash {
-  text-align: center;
-  margin: 8px;
-  -webkit-animation: test 3s ease-in infinite;
-          animation: test 3s ease-in infinite;
-}
-
-.loader {
+nav .nav-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 82px;
+  margin: 2em;
 }
 
-.loader h1 {
+nav .nav-btn ul {
+  margin-right: 12px;
+}
+
+nav .nav-btn li {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+nav .nav-btn span {
+  display: block;
+  width: 14px;
+  height: 2px;
+  margin: 1px;
+  background: black;
+}
+
+nav .nav-btn p {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
   text-align: center;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+nav .nav-btn input {
   position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  top: 32px;
+  width: 82px;
+  height: 22.2px;
 }
 
-.loader::after {
-  content: "";
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: transparent solid 5px;
-  border-top: red solid 5px;
-  border-right: red solid 5px;
-  border-left: red solid 5px;
-  -webkit-animation: loader 2s linear infinite;
-          animation: loader 2s linear infinite;
+nav .nav-btn:hover span {
+  background-color: #a71111;
 }
 
-.loader::before {
-  content: "";
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  border-radius: 50%;
-  border: transparent solid 5px;
-  border-bottom: green solid 5px;
-  border-left: green solid 5px;
-  border-right: green solid 5px;
-  animation: loader 2s linear infinite reverse;
+nav .nav-btn:hover p {
+  color: #a71111;
 }
 
-@-webkit-keyframes loader {
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
+nav .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3em;
 }
 
-@keyframes loader {
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
+nav .nav-menu li {
+  padding: 1em;
+}
+
+nav .nav-menu a {
+  color: black;
+  text-decoration: none;
 }
